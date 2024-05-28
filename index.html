@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Male_Fashion Template">
-  <meta name="keywords" content="Male_Fashion, unica, creative, html">
+  <meta name="description" content="MT Store Web App">
+  <meta name="keywords" content="MT Store html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="/img/mtstore-favi.png">
   <title>MT Store</title>
-
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -28,10 +32,35 @@
     <div class="loader"></div>
   </div>
 
+  <div class="offcanvas-menu-overlay"></div>
+  <div class="offcanvas-menu-wrapper">
+    <div class="offcanvas__option">
+      <div class="offcanvas__links">
+        <a href="/login.html">Sign in</a>
+        <a href="/register.html">Sign up</a>
+      </div>
+      <div class="offcanvas__top__hover">
+        <span>Language <i class="arrow_carrot-down"></i></span>
+        <ul>
+          <li>Vietnam</li>
+          <li>English</li>
+          <li>Japan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="offcanvas__nav__option">
+      <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+      <a href="#"><img src="img/icon/heart.png" alt=""></a>
+      <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+      <div class="price">$0.00</div>
+    </div>
+    <div id="mobile-menu-wrap"></div>
+  </div>
+
   <header class="header">
-    <div class="header__top">
+    <!-- <div class="header__top">
       <div class="container">
-        <div class="row">
+        <div class="row" style="display: flex; align-items: center;">
           <div class="col-lg-6 col-md-7">
             <div class="header__top__left">
               <p>Free shipping, 30-day return or refund guarantee.</p>
@@ -57,10 +86,10 @@
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row nav">
         <div class="col-lg-3 col-md-3 justify-content-center align-items-center d-flex">
-          <a href="./index.html"><img src="img/mtstore-logo.png" alt="" width="60"
-              height="60"></a>
+          <a href="./index.html"><img src="img/mtstore-logo.png" alt="" width="80"
+              height="80" class="logo-img"></a>
         </div>
         <div class="col-lg-6 col-md-6">
           <nav class="header__menu mobile-menu">
@@ -83,56 +112,33 @@
         </div>
       </div>
       <div class="canvas__open"><i class="fa fa-bars"></i></div>
-    </div>
+    </div> -->
   </header>
 
-  <section class="hero">
-    <div class="hero__slider owl-carousel">
-      <div class="hero__items set-bg" data-setbg="img/hero/hero-1.jpg">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-5 col-lg-7 col-md-8">
-              <div class="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>A specialist label creating luxury essentials.
-                  Ethically crafted with an unwavering
-                  commitment to exceptional quality.</p>
-                <a href="#" class="primary-btn">Shop now <span
-                    class="arrow_right"></span></a>
-                <div class="hero__social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-pinterest"></i></a>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <section class="container" style="margin-top: 40px;">
+    <div class="owl-carousel owl-theme">
+      <div class="slider-wrapper">
+        <img src="./img/hero/hero-1.jpg" alt="hero">
+        <div class="slider-desc">
+          <span>Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Voluptatem sunt
+            doloremque assumenda commodi labore natus excepturi aspernatur
+            exercitationem</span>
+          <button type="submit" class="site-btn" style="max-width: 200px;">Shop
+            Now</button>
         </div>
+
       </div>
-      <div class="hero__items set-bg" data-setbg="img/hero/hero-2.jpg">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-5 col-lg-7 col-md-8">
-              <div class="hero__text">
-                <h6>Summer Collection</h6>
-                <h2>Fall - Winter Collections 2030</h2>
-                <p>A specialist label creating luxury essentials.
-                  Ethically crafted with an unwavering
-                  commitment to exceptional quality.</p>
-                <a href="#" class="primary-btn">Shop now <span
-                    class="arrow_right"></span></a>
-                <div class="hero__social">
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-pinterest"></i></a>
-                  <a href="#"><i class="fa fa-instagram"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="slider-wrapper">
+        <img src="./img/hero/hero-2.jpg" alt="hero">
+        <div class="slider-desc">
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ab tenetur
+            distinctio qui ratione esse laudantium vitae quaerat aspernatur eum</span>
+          <button type="submit" class="site-btn" style="max-width: 200px;">Shop
+            Now</button>
         </div>
+
       </div>
     </div>
   </section>
@@ -458,14 +464,15 @@
       src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=941 Tran xuan soan&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
     </iframe>
   </div>
+
   <footer class="footer">
-    <div class="container">
+    <!-- <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="footer__about">
             <div class="footer__logo d-flex justify-content-center">
-              <a href="#"><img src="img/mtstore-footer-logo.png" alt="" width="80"
-                  height="80"></a>
+              <a href="#"><img src="img/mtstore-footer-logo.png" alt="" width="100"
+                  height="100"></a>
             </div>
             <p>The customer is at the heart of our unique business model,
               which includes design.</p>
@@ -508,7 +515,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </footer>
 
   <div class="search-model">
@@ -530,6 +537,7 @@
   <script src="script/mixitup.min.js"></script>
   <script src="script/owl.carousel.min.js"></script>
   <script src="script/main.js"></script>
+  <script src="script/load.js"></script>
 </body>
 
 </html>
