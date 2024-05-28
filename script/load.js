@@ -6,7 +6,6 @@ $(window).on('load', function () {
     $(".header").html(data);
   }).done(function () {
     $('.search-switch').on('click', function () {
-      console.log(123);
       $('.search-model').fadeIn(400);
     });
 
@@ -36,6 +35,24 @@ $(window).on('load', function () {
     $('.collapse').on('hidden.bs.collapse', function () {
       $(this).prev().removeClass('active');
     });
+
+    const menuList = $('.menu-list');
+    menuList.map(function (index, elm) {
+      Array.from(elm.children).forEach(function (elmChild) {
+        if (elmChild.children[0].hasAttribute('href')) {
+          const tempLink = document.createElement('a');
+          tempLink.href = elmChild.children[0].getAttribute('href');
+
+          // The browser automatically resolves the relative URL to an absolute URL
+          const fullUrl = tempLink.href;
+          if (fullUrl === window.location.href) {
+            elmChild.classList.add('active');
+          } else {
+            elmChild.classList.remove('active');
+          }
+        }
+      })
+    })
   });
   $.get("http://127.0.0.1:5501/subpage/footer.html", function (data) {
     $(".footer").html(data);
