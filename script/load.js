@@ -2,7 +2,7 @@ $(window).on('load', function () {
   $(".loader").fadeOut();
   $("#preloder").delay(200).fadeOut("slow");
 
-  $.get("http://127.0.0.1:5501/subpage/header.html", function (data) {
+  $.get("https://nguyenhuynhduc.netlify.app/subpage/header.html", function (data) {
     $(".header").html(data);
   }).done(function () {
     $('.search-switch').on('click', function () {
@@ -43,7 +43,6 @@ $(window).on('load', function () {
           const tempLink = document.createElement('a');
           tempLink.href = elmChild.children[0].getAttribute('href');
 
-          // The browser automatically resolves the relative URL to an absolute URL
           const fullUrl = tempLink.href;
           if (fullUrl === window.location.href) {
             elmChild.classList.add('active');
@@ -54,7 +53,7 @@ $(window).on('load', function () {
       })
     })
   });
-  $.get("http://127.0.0.1:5501/subpage/footer.html", function (data) {
+  $.get("https://nguyenhuynhduc.netlify.app/subpage/header", function (data) {
     $(".footer").html(data);
   });
 });
