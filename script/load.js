@@ -2,7 +2,7 @@ $(window).on('load', function () {
   $(".loader").fadeOut();
   $("#preloder").delay(200).fadeOut("slow");
 
-  $.get("https://nguyenhuynhduc.netlify.app/subpage/header.html", function (data) {
+  $.get("https://nguyenhuynhduc.netlify.app/subpage/header", function (data) {
     $(".header").html(data);
   }).done(function () {
     $('.search-switch').on('click', function () {
@@ -53,7 +53,7 @@ $(window).on('load', function () {
       })
     })
   });
-  $.get("https://nguyenhuynhduc.netlify.app/subpage/header", function (data) {
+  $.get("https://nguyenhuynhduc.netlify.app/subpage/footer", function (data) {
     $(".footer").html(data);
   });
 });
